@@ -1,0 +1,50 @@
+body {
+  color : white !important;
+  width: 720px;
+/*  margin: 0 auto;*/
+  background: #2c3e50 !important;
+  overflow-y: visible;
+}
+
+ul{
+    border-radius: 35px;
+    border: 3px solid #CC0033;
+    list-style: none;
+    margin: 0 0 0 50px;
+    padding: 10px;
+}
+
+
+html body div#test div{
+    display: inline-flex;
+    padding: 40px 0px 0px 0px;
+    text-align: center;
+}
+
+div#littlechild{
+        width: 1400px;
+    height: 20px;
+}
+
+hr#aaa{
+    width: 40px !important;
+    transform: rotate(90deg) !important;
+    margin-left: 105px !important;
+}
+
+ul#papy1{
+    margin-left: 200px;
+}
+
+ul#papy2{
+    margin-left: 150px;
+}
+
+ul#mother{
+        margin-left: 295px;
+}
+
+ul#father{
+    margin-left: 355px;
+}
+
