@@ -120,16 +120,60 @@ child4.addFather(husband2);
 //Fabrication d'un dom par personne
 function create_dom_person(person){
 	//creation d'une liste 
-        var ul = document.createElement('ul');
-                
-        //creation des lignes de la liste
-	var liName = document.createElement('li');
-	var liFirstName = document.createElement('li');
-	var liAge = document.createElement('li');
-	var liKind = document.createElement('li');
-	var liProfession = document.createElement('li');
         
-	//fabrication de la ligne pour l'image
+        //var ul = document.createElement('ul');
+      
+        var newUl = $('<ul/>',{id: divArbre}).appendTo($('#'+ divArbre+""));
+        //creation des lignes de la liste
+        $('<li/>',{html : "<img src="+person.profilPicture + "/>"}).appendTo(newUl);
+        $('<li/>',{html : " Nom : "+person.name + ""}).appendTo(newUl);
+        //var liName = document.createElement('li');
+        
+        $('<li/>',{html : " Prénom : "+person.firstName + ""}).appendTo(newUl);
+        //var liFirstName = document.createElement('li');
+        
+        $('<li/>',{html : " Age : "+person.age + ""}).appendTo(newUl);
+        //var liAge = document.createElement('li');
+        
+        $('<li/>',{html : " Sexe : "+person.kind + ""}).appendTo(newUl);
+        //var liKind = document.createElement('li');
+        
+        $('<li/>',{html : " Profession : "+person.profession + ""}).appendTo(newUl);
+        //var liProfession = document.createElement('li');
+        return newUl;
+}
+        
+	
+        var divGrandParent = $('<div/>',{id:'divGrandParent'}).appendTo($('#test'));
+        $('<div/>',{id : "papy1"}).appendTo(divGrandParent);
+        $('<div/>',{id : "mamy1"}).appendTo(divGrandParent);
+        $('<div/>',{id : "papy2"}).appendTo(divGrandParent);
+        $('<div/>',{id : "mamy2"}).appendTo(divGrandParent);
+        
+        
+    create_dom_person(papy1,'papy1');
+    create_dom_person(mamy1,'mamy1');
+    create_dom_person(papy2,'papy2');
+    create_dom_person(mamy2,'mamy2');
+    
+    create_dom_person(mother,'mother');
+    create_dom_person(father,'father');
+    
+    create_dom_person(papy2,'papy2');
+    create_dom_person(mamy2,'mamy2');
+    create_dom_person(daughter1,"daughter1");
+    create_dom_person(husband1,"husband1");
+    create_dom_person(daughter2,"daughter2");
+    create_dom_person(son1,"son1");
+    create_dom_person(wife1,"wife1");
+    create_dom_person(husband2,"husband2");
+    create_dom_person(son2,"son2");
+
+    create_dom_person(child1,"child1");
+    create_dom_person(child2,"child2");
+    create_dom_person(child3,"child3");
+    create_dom_person(child4,"child4");
+        /*//fabrication de la ligne pour l'image
         var liProfilPicture = document.createElement('li');
 	var imgProfilPicture = document.createElement('img');
 	
@@ -152,9 +196,9 @@ function create_dom_person(person){
 	liProfession.innerHTML = "Profession : " + person.profession;
 	ul.appendChild(liProfession);  
 
-	return ul;
-}
-//declaration des variable pour ranger chaque grand parent
+	return ul;*/
+
+/*//declaration des variable pour ranger chaque grand parent
 var divGrandParent = document.createElement('DIV');
 //declaration des variable pour ranger chaque parent
 var divParent = document.createElement('DIV');
@@ -208,7 +252,7 @@ document.getElementById('test').appendChild(divParent);
 document.getElementById('test').appendChild(divhr)
 document.getElementById('test').appendChild(divChildren);
 document.getElementById('test').appendChild(divhr)
-document.getElementById('test').appendChild(divLittleChildren);
+document.getElementById('test').appendChild(divLittleChildren);*/
 
 
 
