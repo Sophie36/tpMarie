@@ -123,7 +123,8 @@ function create_dom_person(person){
         
         //var ul = document.createElement('ul');
       
-        var newUl = $('<ul/>',{id: divArbre}).appendTo($('#'+ divArbre+""));
+        //var newUl = $('<ul/>',{id: divArbre}).appendTo($('#'+ divArbre+""));
+        var newUl = $('<ul/>').appendTo($('#test'));
         //creation des lignes de la liste
         $('<li/>',{html : "<img src="+person.profilPicture + "/>"}).appendTo(newUl);
         $('<li/>',{html : " Nom : "+person.name + ""}).appendTo(newUl);
@@ -173,6 +174,12 @@ function create_dom_person(person){
     create_dom_person(child2,"child2");
     create_dom_person(child3,"child3");
     create_dom_person(child4,"child4");
+    
+    $('ul').on('click', function(el){
+        var personClicked = $(el.currentTarget);
+        var person = eval(personCliked.attr('id'));
+    
+    });
         /*//fabrication de la ligne pour l'image
         var liProfilPicture = document.createElement('li');
 	var imgProfilPicture = document.createElement('img');
